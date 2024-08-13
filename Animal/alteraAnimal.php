@@ -55,6 +55,16 @@ $row = mysqli_fetch_array($result);
         <div class="principal box">
             <h2>Alteração de Animal</h2>
             <form action="AlteraAnimalExe.php" method="post">
+                <?php
+                    if($row['foto'] != "")
+                    {
+                        echo "<img src='".$row['foto']."' width='80' height='100'/><br>";
+                    }
+                ?>
+                <div>
+                    <label for="foto">Foto</label>
+                    <input type="file" name="foto" id="foto" accept="image/*">
+                </div>
                 <div>
                     <label for="nome">Nome</label>
                     <input type="text" name="nome" id="nome" value="<?php echo $row['nome'] ?>" />
