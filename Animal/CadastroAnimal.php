@@ -47,7 +47,8 @@
     <section>
         <div class="principal box">
             <h2>Cadastro de Animal</h2>
-            <form action="./CadastroAnimalExe.php" method="post">
+            <!-- FORMULARIO -->
+            <form action="./CadastroAnimalExe.php" method="post" enctype="multipart/form-data">
                 <div>
                     <label for="nome">Nome</label>
                     <input type="text" name="nome" id="nome" />
