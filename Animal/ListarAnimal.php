@@ -81,13 +81,13 @@
                         echo "<tr>";
                         echo "<td>" . $row['id'] . "</td>";
 
-                        if($row['foto'] = "")
+                        if($row['foto'] == "")
                         {
                             echo "<td></td>";
                         }
                         else
                         {
-                            echo "<td><img src='fotos/".$row['foto']."' width='80' height='100'></td>";
+                            echo "<td><img src='".$row['foto']."' width='80' height='100'></td>";
                         }
 
                         echo "<td>" . $row['nomeAnimal'] . "</td>";
