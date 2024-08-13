@@ -48,6 +48,15 @@
         <div class="principal">
             <?php
             include('../includes/conexao.php');
+            //UPLOAD FOTO
+            if(file_exists($_FILES['fotos']['name']))
+            {
+                $pasta_destino = 'fotos/';
+                $extensao = strtolower($_FILES['fotos']['name'], -4);
+                $nome_foto = $pasta_destino . date('Ymd-His');
+                move_uploaded_file($_FILES['foto']['name'], $nome_foto);
+            }
+
             $nome = $_POST['nome'];
             $especie = $_POST['especie'];
             $raca = $_POST['raca'];
