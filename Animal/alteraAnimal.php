@@ -54,7 +54,7 @@ $row = mysqli_fetch_array($result);
     <section>
         <div class="principal box">
             <h2>Alteração de Animal</h2>
-            <form action="AlteraAnimalExe.php" method="post">
+            <form action="AlteraAnimalExe.php" method="post" enctype="multipart/form-data">
                 <?php
                     if($row['foto'] != "")
                     {
